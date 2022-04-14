@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+
+# But not these files...
+!.gitignore
+!mst.py
+!Classes.py
+!run-validation.sh
+
