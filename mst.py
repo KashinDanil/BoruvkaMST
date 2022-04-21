@@ -71,13 +71,13 @@ def writeForest(filename, trees):
 
 def getGraph(filename):
     n, scale, m, directed, align, rowsIndices, endV, weights = readGraph(filename)
+    # print(n, scale, m, directed, align, rowsIndices, endV, weights, sep="\n")
     vertices = {}
     for number in range(n):
         vertices[number] = Vertex(number)
     for number in range(n):
         for i in range(rowsIndices[number], rowsIndices[number + 1]):
             vertices[number].edges.append(Edge(i, number, endV[i], weights[i]))
-            vertices[endV[i]].edges.append(Edge(i, endV[i], number, weights[i]))
 
     return Graph(vertices)
 
