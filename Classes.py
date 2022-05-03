@@ -18,6 +18,9 @@ class Graph(object):
 
         return edges
 
+    def getWeight(self):
+        return sum([edge.weight for edge in self.getEdges()])
+
 
 class Vertex(object):
     def __init__(self, number):
@@ -41,7 +44,7 @@ class Edge(object):
         self.weight = weight
 
     def toString(self):
-        return '(' + str(self.vertexFrom) + 'x' + str(self.vertexTo) + '=' + str(self.weight) + ')'
+        return '([' + str(self.rank) + ']' + str(self.vertexFrom) + 'x' + str(self.vertexTo) + '=' + str(self.weight) + ')'
 
 
 class Component(object):

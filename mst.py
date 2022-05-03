@@ -60,8 +60,7 @@ def writeForest(filename, trees):
         p_edge_list.append(numEdges)
         for edge in edges:
             edge_id.append(edge.rank)
-    edge_id = sorted(edge_id)
-    # print(numTrees, numEdges, p_edge_list, edge_id, sep="\n")
+    # print(numTrees, numEdges, p_edge_list, edge_id, sep="\n")  # Edge's number 3 weight is 0.0869702591149124
     with open(filename, "wb") as f:
         f.write(struct.pack('i', numTrees))
         f.write(struct.pack('q', numEdges))
